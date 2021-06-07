@@ -7,9 +7,25 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: {{ .Values.service.port }}
-      targetPort: http
+    - port: 53
+      targetPort: 53
+      protocol: UDP
+      name: dns-udp
+    - port: 53
+      targetPort: 53
+      protocol: TCP
+      name: dns-tcp
+    - port: 80
+      targetPort: 80
       protocol: TCP
       name: http
+    - port: 3333
+      targetPort: 3333
+      protocol: TCP
+      name: idk # TODO: Figure out what this doess
+    - port: 3443
+      targetPort: 3443
+      protocol: TCP
+      name: https
   selector:
     {{- include "traffic-router.selectorLabels" . | nindent 4 }}
