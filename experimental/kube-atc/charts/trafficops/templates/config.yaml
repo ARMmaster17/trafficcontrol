@@ -1,0 +1,59 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: atc-to-conf
+data:
+    atc-to-cdn.conf: |
+        {
+            "hypnotoad" : {
+                "listen" : [
+                    "https://[::]?cert=$crt&key=$key&verify=0x00&ciphers=AES128-GCM-SHA256:HIGH:!RC4:!MD5:!aNULL:!EDH:!ED"
+                ]
+            },
+            "use_ims": true,
+            "traffic_ops_golang" : {
+                "traffic_vault_backend": "$TV_BACKEND",
+                "traffic_vault_config": {
+                    "dbname": "traffic_ops",
+                    "hostname": "kube-atc-traffic-vault.default.svc",
+                    "user": "$TV_DB_USER",
+                    "password": "$TV_DB_USER_PASS",
+                    "port": 5432,
+                    "conn_max_lifetime_seconds": 60,
+                    "max_connections": 500,
+                    "max_idle_connections": 30,
+                    "query_timeout_seconds": 60,
+                    "aes_key_location": "$TV_AES_KEY_LOCATION"
+                },
+                "proxy_timeout" : 60,
+                "proxy_tls_timeout" : 60,
+                "proxy_read_header_timeout" : 60,
+                "read_timeout" : 60,
+                "read_header_timeout" : 60,
+                "request_timeout" : 60,
+                "write_timeout" : 60,
+                "idle_timeout" : 60,
+                "log_location_error": "$TO_LOG_ERROR",
+                "log_location_warning": "$TO_LOG_WARNING",
+                "log_location_info": "$TO_LOG_INFO",
+                "log_location_debug": "$TO_LOG_DEBUG",
+                "log_location_event": "$TO_LOG_EVENT",
+                "db_conn_max_lifetime_seconds": 60,
+                "db_query_timeout_seconds": 20
+            },
+            "to" : {
+                "email_from" : "no-reply@example.com"
+            },
+            "portal" : {
+                "base_url" : "https://kube-atc-traffic-portal.default.svc/#!/",
+                "email_from" : "no-reply@example.com"
+            },
+            "smtp" : {
+                "enabled" : false,
+            },
+            "InfluxEnabled": true,
+            "influxdb_conf_path": "/opt/traffic_ops/app/conf/production/influx.conf",
+            "lets_encrypt" : {
+                "environment": "staging"
+            }
+        }
