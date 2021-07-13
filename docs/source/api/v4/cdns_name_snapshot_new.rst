@@ -364,17 +364,17 @@ Response Structure
 				"certificates.polling.interval": "300000",
 				"consistent.dns.routing": "true",
 				"coveragezone.polling.interval": "3600000",
-				"coveragezone.polling.url": "https://static.infra.ciab.test:443/coverage-zone.json",
+				"coveragezone.polling.url": "https://static.ciab:443/coverage-zone.json",
 				"dnssec.dynamic.response.expiration": "300s",
 				"dnssec.enabled": "false",
 				"domain_name": "mycdn.ciab.test",
 				"federationmapping.polling.interval": "60000",
 				"federationmapping.polling.url": "https://${toHostname}/api/2.0/federations/all",
 				"geolocation.polling.interval": "86400000",
-				"geolocation.polling.url": "https://static.infra.ciab.test:443/GeoLite2-City.mmdb.gz",
+				"geolocation.polling.url": "https://static.ciab:443/GeoLite2-City.mmdb.gz",
 				"keystore.maintenance.interval": "300",
 				"neustar.polling.interval": "86400000",
-				"neustar.polling.url": "https://static.infra.ciab.test:443/neustar.tar.gz",
+				"neustar.polling.url": "https://static.ciab:443/neustar.tar.gz",
 				"soa": {
 					"admin": "twelve_monkeys",
 					"expire": "604800",
@@ -400,7 +400,7 @@ Response Structure
 					"capabilities": [
 						"RAM_DISK_STORAGE"
 					],
-					"fqdn": "edge.infra.ciab.test",
+					"fqdn": "edge.ciab",
 					"hashCount": 999,
 					"hashId": "edge",
 					"httpsPort": 443,
@@ -419,7 +419,7 @@ Response Structure
 					"capabilities": [
 						"RAM_DISK_STORAGE"
 					],
-					"fqdn": "mid.infra.ciab.test",
+					"fqdn": "mid.ciab",
 					"hashCount": 999,
 					"hashId": "mid",
 					"httpsPort": 443,
@@ -437,7 +437,7 @@ Response Structure
 			"contentRouters": {
 				"trafficrouter": {
 					"api.port": "3333",
-					"fqdn": "trafficrouter.infra.ciab.test",
+					"fqdn": "trafficrouter.ciab",
 					"httpsPort": 443,
 					"ip": "172.26.0.15",
 					"ip6": "",
@@ -540,7 +540,7 @@ Response Structure
 			},
 			"monitors": {
 				"trafficmonitor": {
-					"fqdn": "trafficmonitor.infra.ciab.test",
+					"fqdn": "trafficmonitor.ciab",
 					"httpsPort": 443,
 					"ip": "172.26.0.14",
 					"ip6": "",
@@ -553,7 +553,7 @@ Response Structure
 			"stats": {
 				"CDN_name": "CDN-in-a-Box",
 				"date": 1590607873,
-				"tm_host": "trafficops.infra.ciab.test:443",
+				"tm_host": "trafficops.ciab:443",
 				"tm_user": "admin",
 				"tm_version": "development"
 			},

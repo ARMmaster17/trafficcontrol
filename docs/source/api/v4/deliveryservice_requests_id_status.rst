@@ -184,7 +184,7 @@ The response is a full representation of the modified :term:`DSR`.
 			"missLong": -88,
 			"multiSiteOrigin": false,
 			"originShield": null,
-			"orgServerFqdn": "http://origin.infra.ciab.test",
+			"orgServerFqdn": "http://origin.ciab",
 			"profileDescription": null,
 			"profileId": null,
 			"profileName": null,

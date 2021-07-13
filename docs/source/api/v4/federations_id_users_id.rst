@@ -43,7 +43,7 @@ Request Structure
 	:caption: Request Structure
 
 	DELETE /api/4.0/federations/1/users/2 HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.62.0
 	Accept: */*
 	Cookie: mojolicious=...

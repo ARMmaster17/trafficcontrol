@@ -60,7 +60,7 @@ Request Structure
 	:caption: Request Example
 
 	PUT /api/3.0/cachegroups/8 HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...
@@ -160,7 +160,7 @@ Request Structure
 	:caption: Request Example
 
 	DELETE /api/3.0/cachegroups/42 HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...

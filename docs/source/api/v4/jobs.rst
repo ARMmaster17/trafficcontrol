@@ -54,7 +54,7 @@ Request Structure
 	:caption: Request Example
 
 	GET /api/4.0/jobs?id=3&dsId=1&userId=2 HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: python-requests/2.20.1
 	Accept-Encoding: gzip, deflate
 	Accept: */*
@@ -92,7 +92,7 @@ Response Structure
 	Content-Length: 186
 
 	{ "response": [{
-		"assetUrl": "http://origin.infra.ciab.test/.*",
+		"assetUrl": "http://origin.ciab/.*",
 		"createdBy": "admin",
 		"deliveryService": "demo1",
 		"id": 3,
@@ -132,7 +132,7 @@ Request Structure
 	:caption: Request Example
 
 	POST /api/4.0/jobs HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: python-requests/2.20.1
 	Accept-Encoding: gzip, deflate
 	Accept: */*
@@ -172,7 +172,7 @@ Response Structure
 	Access-Control-Allow-Origin: *
 	Content-Encoding: gzip
 	Content-Type: application/json
-	Location: https://trafficops.infra.ciab.test/api/4.0/jobs?id=3
+	Location: https://trafficops.ciab/api/4.0/jobs?id=3
 	Set-Cookie: mojolicious=...; Path=/; Expires=Mon, 18 Nov 2019 17:40:54 GMT; Max-Age=3600; HttpOnly
 	Whole-Content-Sha512: nB2xg2IqO56rLT8dI4+KZgxOsTe5ShctG1U8epRsY9NyyMIpx8TZYt5MrO2QikuYh+NnyoR6V0VICCnGCKZpKw==
 	X-Server-Name: traffic_ops_golang/
@@ -187,7 +187,7 @@ Response Structure
 			}
 		],
 		"response": {
-			"assetUrl": "http://origin.infra.ciab.test/.*",
+			"assetUrl": "http://origin.ciab/.*",
 			"createdBy": "admin",
 			"deliveryService": "demo1",
 			"id": 3,
@@ -237,7 +237,7 @@ Request Structure
 	:caption: Request Example
 
 	PUT /api/4.0/jobs?id=3 HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: python-requests/2.20.1
 	Accept-Encoding: gzip, deflate
 	Accept: */*
@@ -247,7 +247,7 @@ Request Structure
 	Content-Type: application/json
 
 	{
-		"assetUrl": "http://origin.infra.ciab.test/.*",
+		"assetUrl": "http://origin.ciab/.*",
 		"createdBy": "admin",
 		"deliveryService": "demo1",
 		"id": 3,
@@ -291,7 +291,7 @@ Response Structure
 		"level": "success"
 	}],
 	"response": {
-		"assetUrl": "http://origin.infra.ciab.test/.*",
+		"assetUrl": "http://origin.ciab/.*",
 		"createdBy": "admin",
 		"deliveryService": "demo1",
 		"id": 3,
@@ -327,7 +327,7 @@ Request Structure
 	:caption: Request Example
 
 	DELETE /api/4.0/jobs?id=3 HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: python-requests/2.20.1
 	Accept-Encoding: gzip, deflate
 	Accept: */*
@@ -372,7 +372,7 @@ Response Structure
 		}
 	],
 	"response": {
-		"assetUrl": "http://origin.infra.ciab.test/.*",
+		"assetUrl": "http://origin.ciab/.*",
 		"createdBy": "admin",
 		"deliveryService": "demo1",
 		"id": 3,

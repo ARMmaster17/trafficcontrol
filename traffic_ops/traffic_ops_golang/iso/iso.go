@@ -81,7 +81,7 @@ const (
 //
 // Success:
 //   HTTP 200
-//   Content-Disposition: attachment; filename="db.infra.ciab.test-centos72.iso"
+//   Content-Disposition: attachment; filename="db.ciab-centos72.iso"
 //   Content-Type: application/download
 //
 func ISOs(w http.ResponseWriter, req *http.Request) {

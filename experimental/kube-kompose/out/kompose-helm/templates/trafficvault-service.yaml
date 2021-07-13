@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    com.basho.riak.cluster.name: trafficvault
+    kompose.cmd: kompose convert -f docker-compose.yml -f docker-compose.expose-ports.yml -f ./optional/docker-compose.vnc.yml -f ./optional/docker-compose.vnc.expose-ports.yml --push-image=false -c
+    kompose.version: 1.22.0 (955b78124)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: trafficvault
+  name: trafficvault
+spec:
+  ports:
+    - name: "8087"
+      port: 8087
+      targetPort: 8087
+    - name: "8088"
+      port: 8088
+      targetPort: 8088
+    - name: "8098"
+      port: 8098
+      targetPort: 8098
+  selector:
+    io.kompose.service: trafficvault
+status:
+  loadBalancer: {}

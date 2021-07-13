@@ -165,7 +165,7 @@ Response Structure
 				],
 				"cachegroup": "CDN_in_a_Box_Edge",
 				"hostname": "edge",
-				"fqdn": "edge.infra.ciab.test",
+				"fqdn": "edge.ciab",
 				"type": "EDGE",
 				"hashid": "edge"
 			},
@@ -195,7 +195,7 @@ Response Structure
 				],
 				"cachegroup": "CDN_in_a_Box_Mid",
 				"hostname": "mid",
-				"fqdn": "mid.infra.ciab.test",
+				"fqdn": "mid.ciab",
 				"type": "MID",
 				"hashid": "mid"
 			}
@@ -209,7 +209,7 @@ Response Structure
 				"port": 80,
 				"cachegroup": "CDN_in_a_Box_Edge",
 				"hostname": "trafficmonitor",
-				"fqdn": "trafficmonitor.infra.ciab.test"
+				"fqdn": "trafficmonitor.ciab"
 			}
 		],
 		"cacheGroups": [

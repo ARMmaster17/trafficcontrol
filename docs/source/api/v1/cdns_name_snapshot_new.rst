@@ -41,7 +41,7 @@ Request Structure
 	:caption: Request Example
 
 	GET /api/1.4/cdns/CDN-in-a-Box/snapshot/new HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...
@@ -365,17 +365,17 @@ Response Structure
 			"certificates.polling.interval": "300000",
 			"consistent.dns.routing": "true",
 			"coveragezone.polling.interval": "3600000",
-			"coveragezone.polling.url": "https://trafficops.infra.ciab.test:443/coverage-zone.json",
+			"coveragezone.polling.url": "https://trafficops.ciab:443/coverage-zone.json",
 			"dnssec.dynamic.response.expiration": "300s",
 			"dnssec.enabled": "false",
 			"domain_name": "mycdn.ciab.test",
 			"federationmapping.polling.interval": "60000",
 			"federationmapping.polling.url": "https://${toHostname}/api/1.5/federations/all",
 			"geolocation.polling.interval": "86400000",
-			"geolocation.polling.url": "https://trafficops.infra.ciab.test:443/GeoLite2-City.mmdb.gz",
+			"geolocation.polling.url": "https://trafficops.ciab:443/GeoLite2-City.mmdb.gz",
 			"keystore.maintenance.interval": "300",
 			"neustar.polling.interval": "86400000",
-			"neustar.polling.url": "https://trafficops.infra.ciab.test:443/neustar.tar.gz",
+			"neustar.polling.url": "https://trafficops.ciab:443/neustar.tar.gz",
 			"soa": {
 				"admin": "twelve_monkeys",
 				"expire": "604800",
@@ -398,7 +398,7 @@ Response Structure
 		"contentServers": {
 			"edge": {
 				"cacheGroup": "CDN_in_a_Box_Edge",
-				"fqdn": "edge.infra.ciab.test",
+				"fqdn": "edge.ciab",
 				"hashCount": 999,
 				"hashId": "edge",
 				"httpsPort": 443,
@@ -419,7 +419,7 @@ Response Structure
 			},
 			"mid": {
 				"cacheGroup": "CDN_in_a_Box_Mid",
-				"fqdn": "mid.infra.ciab.test",
+				"fqdn": "mid.ciab",
 				"hashCount": 999,
 				"hashId": "mid",
 				"httpsPort": 443,
@@ -438,7 +438,7 @@ Response Structure
 			"trafficrouter": {
 				"api.port": "3333",
 				"secure.api.port": "3443",
-				"fqdn": "trafficrouter.infra.ciab.test",
+				"fqdn": "trafficrouter.ciab",
 				"httpsPort": 443,
 				"ip": "172.16.239.60",
 				"ip6": "fc01:9400:1000:8::60",
@@ -533,7 +533,7 @@ Response Structure
 		},
 		"monitors": {
 			"trafficmonitor": {
-				"fqdn": "trafficmonitor.infra.ciab.test",
+				"fqdn": "trafficmonitor.ciab",
 				"httpsPort": 443,
 				"ip": "172.16.239.40",
 				"ip6": "fc01:9400:1000:8::40",

@@ -45,7 +45,7 @@ Request Structure
 	:caption: Request Example
 
 	POST /api/4.0/deliveryservices/sslkeys/add HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	Content-Type: application/json
 
 	{

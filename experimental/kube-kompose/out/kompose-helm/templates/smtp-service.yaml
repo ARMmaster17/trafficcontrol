@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.yml -f docker-compose.expose-ports.yml -f ./optional/docker-compose.vnc.yml -f ./optional/docker-compose.vnc.expose-ports.yml --push-image=false -c
+    kompose.version: 1.22.0 (955b78124)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: smtp
+  name: smtp
+spec:
+  ports:
+    - name: "4443"
+      port: 4443
+      targetPort: 443
+  selector:
+    io.kompose.service: smtp
+status:
+  loadBalancer: {}

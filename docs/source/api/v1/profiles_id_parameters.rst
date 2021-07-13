@@ -42,7 +42,7 @@ Request Structure
 	:caption: Request Example
 
 	GET /api/1.4/parameters/profile/GLOBAL HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...
@@ -146,7 +146,7 @@ Single Parameter Format
 	:caption: Response Example - Single Parameter Format
 
 	POST /api/1.1/profiles/18/parameters HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...
@@ -172,7 +172,7 @@ Parameter Array Format
 	:caption: Request Example - Parameter Array Format
 
 	POST /api/1.1/profiles/18/parameters HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...

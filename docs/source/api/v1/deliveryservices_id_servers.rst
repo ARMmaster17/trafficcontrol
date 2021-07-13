@@ -111,7 +111,7 @@ Response Structure
 			"cachegroupId": 7,
 			"cdnId": 2,
 			"cdnName": "CDN-in-a-Box",
-			"domainName": "infra.ciab.test",
+			"domainName": "ciab",
 			"guid": null,
 			"hostName": "edge",
 			"httpsPort": 443,

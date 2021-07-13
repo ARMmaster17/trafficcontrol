@@ -198,7 +198,7 @@ Response Structure
 		"missLong": -88,
 		"multiSiteOrigin": false,
 		"originShield": null,
-		"orgServerFqdn": "http://origin.infra.ciab.test",
+		"orgServerFqdn": "http://origin.ciab",
 		"profileDescription": null,
 		"profileId": null,
 		"profileName": null,
@@ -314,7 +314,7 @@ Request Structure
 	:caption: Request Example
 
 	POST /api/2.0/deliveryservices HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...
@@ -339,7 +339,7 @@ Request Structure
 		"missLong": 0,
 		"maxOriginConnections": 0,
 		"multiSiteOrigin": false,
-		"orgServerFqdn": "http://origin.infra.ciab.test",
+		"orgServerFqdn": "http://origin.ciab",
 		"protocol": 0,
 		"qstringIgnore": 0,
 		"rangeRequestHandling": 0,
@@ -496,7 +496,7 @@ Response Structure
 			"missLong": -1,
 			"multiSiteOrigin": false,
 			"originShield": null,
-			"orgServerFqdn": "http://origin.infra.ciab.test",
+			"orgServerFqdn": "http://origin.ciab",
 			"profileDescription": null,
 			"profileId": null,
 			"profileName": null,

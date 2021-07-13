@@ -60,7 +60,7 @@ Request Structure
 	:caption: Request Example
 
 	GET /api/4.0/parameters?configFile=records.config&name=location HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...
@@ -126,7 +126,7 @@ The request body may be in one of two formats, a single :term:`Parameter` object
 	:caption: Request Example - Single Object Format
 
 	POST /api/4.0/parameters HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...
@@ -144,7 +144,7 @@ The request body may be in one of two formats, a single :term:`Parameter` object
 	:caption: Request Example - Array Format
 
 	POST /api/4.0/parameters HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...

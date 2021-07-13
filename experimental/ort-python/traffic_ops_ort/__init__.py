@@ -170,8 +170,8 @@ Arguments and Flags
 
 	This must be at minimum an :abbr:`FQDN (Fully Qualified Domain Name)` that resolves to the
 	Traffic Ops server, but may optionally include the schema and/or port number. E.g.
-	``https://trafficops.infra.ciab.test:443``, ``https://trafficops.infra.ciab.test``,
-	``trafficops.infra.ciab.test:443``, and ``trafficops.infra.ciab.test`` are all acceptable, and
+	``https://trafficops.ciab:443``, ``https://trafficops.ciab``,
+	``trafficops.ciab:443``, and ``trafficops.ciab`` are all acceptable, and
 	in fact are all equivalent. When given a value without a schema, HTTPS will be the assumed
 	protocol, and when a port number is not present, 443 will be assumed except in the case that
 	the schema *is* provided and is ``http://`` (case-insensitive) in which case 80 will be assumed.
@@ -419,8 +419,8 @@ def main() -> int:
 	                    type=str)
 	parser.add_argument("--to_url",
 	                    help=("A URL or hostname - optionally with a port specification - that "
-	                          "points to a Traffic Ops server. e.g. `trafficops.infra.ciab.test` or"
-	                          " `https://trafficops.infra.ciab.test:443`. This overrides the TO_URL"
+	                          "points to a Traffic Ops server. e.g. `trafficops.ciab` or"
+	                          " `https://trafficops.ciab:443`. This overrides the TO_URL"
 	                          " environment variable"),
 	                    type=str)
 	parser.add_argument("legacy",

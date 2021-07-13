@@ -188,7 +188,7 @@ Look up the URL for a test HTTP :term:`Delivery Service` in Traffic Ops and then
 	< Date: Wed, 16 Jan 2019 21:52:15 GMT
 	< Server: ATS/7.1.4
 	< Age: 1
-	< Via: http/1.1 mid.infra.ciab.test (ApacheTrafficServer/7.1.4 [uScMsSfWpSeN:t cCMi p sS]), http/1.1 edge.infra.ciab.test (ApacheTrafficServer/7.1.4 [uScMsSfWpSeN:t cCMi pSs ])
+	< Via: http/1.1 mid.ciab (ApacheTrafficServer/7.1.4 [uScMsSfWpSeN:t cCMi p sS]), http/1.1 edge.ciab (ApacheTrafficServer/7.1.4 [uScMsSfWpSeN:t cCMi pSs ])
 	< Connection: keep-alive
 	<
 	<!DOCTYPE html>

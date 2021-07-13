@@ -222,7 +222,7 @@ Response Structure
 				"missLong": -88,
 				"multiSiteOrigin": false,
 				"originShield": null,
-				"orgServerFqdn": "http://origin.infra.ciab.test",
+				"orgServerFqdn": "http://origin.ciab",
 				"profileDescription": null,
 				"profileId": null,
 				"profileName": null,

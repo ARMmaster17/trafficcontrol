@@ -59,7 +59,7 @@ services:
     env_file: 
       - variables.env
     hostname: vnc
-    domainname: infra.ciab.test
+    domainname: ciab
     volumes:
       - shared:/shared
       

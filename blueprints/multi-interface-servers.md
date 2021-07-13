@@ -275,7 +275,7 @@ path-specified CDN. An example of one such array member is given below.
 ```json
 {
 	"cacheGroup": "Ciab_Edge",
-	"fqdn": "edge.infra.ciab.test",
+	"fqdn": "edge.ciab",
 	"hashId": "edge",
 	"hostName": "edge",
 	"interfacename": "eth0",
@@ -292,7 +292,7 @@ above example with no additional interfaces would look like:
 ```json
 {
 	"cacheGroup": "Ciab_Edge",
-	"fqdn": "edge.infra.ciab.test",
+	"fqdn": "edge.ciab",
 	"hashId": "edge",
 	"hostName": "edge",
 	"interfaces": [
@@ -345,7 +345,7 @@ this writing is shown below.
 	"cachegroupId": 6,
 	"cdnId": 2,
 	"cdnName": "CDN-in-a-Box",
-	"domainName": "infra.ciab.test",
+	"domainName": "ciab",
 	"guid": null,
 	"hostName": "mid",
 	"httpsPort": 443,
@@ -395,7 +395,7 @@ After this feature's inclusion, the same element would look like this:
 	"cachegroupId": 6,
 	"cdnId": 2,
 	"cdnName": "CDN-in-a-Box",
-	"domainName": "infra.ciab.test",
+	"domainName": "ciab",
 	"guid": null,
 	"hostName": "mid",
 	"httpsPort": 443,

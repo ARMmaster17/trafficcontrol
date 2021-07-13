@@ -60,7 +60,7 @@ Request Structure
 	:caption: Request Example
 
 	GET /api/3.0/servers/9/deliveryservices HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...
@@ -207,7 +207,7 @@ Response Structure
 		"missLong": -88,
 		"multiSiteOrigin": false,
 		"originShield": null,
-		"orgServerFqdn": "http://origin.infra.ciab.test",
+		"orgServerFqdn": "http://origin.ciab",
 		"profileDescription": null,
 		"profileId": null,
 		"profileName": null,

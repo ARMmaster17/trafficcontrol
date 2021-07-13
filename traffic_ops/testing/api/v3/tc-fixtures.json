@@ -3109,7 +3109,7 @@
         {
             "cachegroup": "cachegroup1",
             "cdnName": "cdn1",
-            "domainName": "infra.ciab.test",
+            "domainName": "ciab",
             "guid": null,
             "hostName": "trafficvault",
             "httpsPort": 8088,

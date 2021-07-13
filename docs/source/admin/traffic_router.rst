@@ -72,7 +72,7 @@ Installing Traffic Router
 		;mycdn.ciab.test.		IN	A
 
 		;; AUTHORITY SECTION:
-		mycdn.ciab.test.	30	IN	SOA	trafficrouter.infra.ciab.test. twelve_monkeys.mycdn.ciab.test. 2019010918 28800 7200 604800 30
+		mycdn.ciab.test.	30	IN	SOA	trafficrouter.ciab. twelve_monkeys.mycdn.ciab.test. 2019010918 28800 7200 604800 30
 
 		;; Query time: 28 msec
 		;; SERVER: ::1#53(::1)

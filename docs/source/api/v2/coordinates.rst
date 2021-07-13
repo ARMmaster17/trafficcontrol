@@ -145,7 +145,7 @@ Request Structure
 	:caption: Request Example
 
 	POST /api/2.0/coordinates HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...
@@ -218,7 +218,7 @@ Request Structure
 	:caption: Request Example
 
 	PUT /api/2.0/coordinates?id=9 HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...

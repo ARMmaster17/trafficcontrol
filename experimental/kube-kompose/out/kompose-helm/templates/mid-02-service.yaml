@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.yml -f docker-compose.expose-ports.yml -f ./optional/docker-compose.vnc.yml -f ./optional/docker-compose.vnc.expose-ports.yml --push-image=false -c
+    kompose.version: 1.22.0 (955b78124)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: mid-02
+  name: mid-02
+spec:
+  ports:
+    - name: "9200"
+      port: 9200
+      targetPort: 80
+  selector:
+    io.kompose.service: mid-02
+status:
+  loadBalancer: {}

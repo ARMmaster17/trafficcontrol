@@ -81,7 +81,7 @@ Response Structure
 			"tm.instance_name": "CDN-In-A-Box",
 			"tm.logourl": "/images/tc_logo.png",
 			"tm.toolname": "Traffic Ops",
-			"tm.url": "https://trafficops.infra.ciab.test:443/",
+			"tm.url": "https://trafficops.ciab:443/",
 			"use_reval_pending": "0",
 			"use_tenancy": "1"
 		}

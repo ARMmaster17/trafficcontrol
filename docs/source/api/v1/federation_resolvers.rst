@@ -59,7 +59,7 @@ Request Structure
 	:caption: Request Example
 
 	GET /api/1.4/federation_resolvers?type=RESOLVE6 HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.63.0
 	Accept: */*
 	Cookie: mojolicious=...
@@ -121,7 +121,7 @@ Request Structure
 	:caption: Request Example
 
 	POST /api/1.4/federation_resolvers HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.63.0
 	Accept: */*
 	Cookie: mojolicious=...

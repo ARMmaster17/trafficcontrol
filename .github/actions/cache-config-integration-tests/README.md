@@ -19,7 +19,7 @@
 
 # to-ort-integration-tests JavaScript action
 This action runs the Traffic Ops ORT integration tests with the Traffic Ops API.
-- Provides a Riak server at address `trafficvault.infra.ciab.test`
+- Provides a Riak server at address `trafficvault.ciab`
 
 ## Inputs
 

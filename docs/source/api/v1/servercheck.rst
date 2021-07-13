@@ -42,7 +42,7 @@ The request only requires to have either ``host_name`` or ``id`` defined.
 	:caption: Request Example
 
 	POST /api/1.1/servercheck HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...

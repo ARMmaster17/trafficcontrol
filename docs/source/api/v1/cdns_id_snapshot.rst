@@ -45,7 +45,7 @@ Request Structure
 	:caption: Request Example
 
 	PUT /api/1.4/cdns/2/snapshot HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...

@@ -58,7 +58,7 @@ Request Structure
 	:caption: Request Example
 
 	GET /api/2.0/regions?division=1 HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...
@@ -114,7 +114,7 @@ Request Structure
 	:caption: Request Example
 
 	POST /api/2.0/regions HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...
@@ -192,7 +192,7 @@ Request Structure
 
 	DELETE /api/2.0/regions?name=Manchester HTTP/1.1
 	User-Agent: curl/7.29.0
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	Accept: */*
 	Cookie: mojolicious=...
 

@@ -58,7 +58,7 @@ ciab_dir="${GITHUB_WORKSPACE}/infrastructure/cdn-in-a-box";
 trafficvault=trafficvault;
 start_traffic_vault() {
 	<<-'/ETC/HOSTS' sudo tee --append /etc/hosts
-		172.17.0.1    trafficvault.infra.ciab.test
+		172.17.0.1    trafficvault.ciab
 	/ETC/HOSTS
 
 	<<-'BASH_LINES' cat >infrastructure/cdn-in-a-box/traffic_vault/prestart.d/00-0-standalone-config.sh;
@@ -87,7 +87,7 @@ start_traffic_vault() {
 	docker run \
 		--detach \
 		--env-file="${ciab_dir}/variables.env" \
-		--hostname="${trafficvault}.infra.ciab.test" \
+		--hostname="${trafficvault}.ciab" \
 		--name="$trafficvault" \
 		--publish=8087:8087 \
 		--rm \

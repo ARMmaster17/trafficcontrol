@@ -45,7 +45,7 @@ Request Structure
 	:caption: Request Example
 
 	GET /api/4.0/deliveryserviceserver?page=1&limit=2&orderby=lastUpdated HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...
@@ -115,7 +115,7 @@ Request Structure
 	:caption: Request Example
 
 	POST /api/4.0/deliveryserviceserver HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...

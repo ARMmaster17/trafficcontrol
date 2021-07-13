@@ -42,7 +42,7 @@ Request Structure
 	:caption: Request Example
 
 	GET /crs/stats HTTP/1.1
-	Host: trafficrouter.infra.ciab.test
+	Host: trafficrouter.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 
@@ -125,7 +125,7 @@ Request Structure
 	:caption: Request Example
 
 	GET /crs/stats/ip/255.255.255.255 HTTP/1.1
-	Host: trafficrouter.infra.ciab.test
+	Host: trafficrouter.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 
@@ -166,7 +166,7 @@ Request Structure
 	:caption: Request Example
 
 	GET /crs/locations HTTP/1.1
-	Host: trafficrouter.infra.ciab.test
+	Host: trafficrouter.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 
@@ -198,7 +198,7 @@ Request Structure
 	:caption: Request Example
 
 	GET /crs/locations/caches HTTP/1.1
-	Host: trafficrouter.infra.ciab.test
+	Host: trafficrouter.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 
@@ -216,7 +216,7 @@ Response Structure
 		"CDN_in_a_Box_Edge": [
 			{
 				"cacheId": "edge",
-				"fqdn": "edge.infra.ciab.test",
+				"fqdn": "edge.ciab",
 				"ipAddresses": [
 					"172.16.239.100",
 					"fc01:9400:1000:8:0:0:0:100"
@@ -254,7 +254,7 @@ Request Structure
 	:caption: Request Example
 
 	GET /crs/locations/CDN_in_a_Box_Edge/caches HTTP/1.1
-	Host: trafficrouter.infra.ciab.test
+	Host: trafficrouter.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 
@@ -271,7 +271,7 @@ Response Structure
 	{ "caches": [
 		{
 			"cacheId": "edge",
-			"fqdn": "edge.infra.ciab.test",
+			"fqdn": "edge.ciab",
 			"ipAddresses": [
 				"172.16.239.100",
 				"fc01:9400:1000:8:0:0:0:100"
@@ -381,7 +381,7 @@ Request Structure
 	:caption: Request Example
 
 	GET /crs/consistenthash/deliveryservice?deliveryServiceId=demo1&requestPath=/ HTTP/1.1
-	Host: trafficrouter.infra.ciab.test
+	Host: trafficrouter.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 

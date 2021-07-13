@@ -44,7 +44,7 @@ Request Structure
 
 	GET /api/1.5/cdns/CDN-in-a-Box/configs/routing HTTP/1.1
 	User-Agent: curl/7.29.0
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	Accept: */*
 	Cookie: mojolicious=...
 
@@ -205,7 +205,7 @@ Response Structure
 					"port": 80,
 					"deliveryServices": [],
 					"hostName": "mid",
-					"fqdn": "mid.infra.ciab.test",
+					"fqdn": "mid.ciab",
 					"interfaceName": "eth0",
 					"type": "MID",
 					"hashId": "mid"
@@ -219,7 +219,7 @@ Response Structure
 					"port": 80,
 					"deliveryServices": [],
 					"hostName": "edge",
-					"fqdn": "edge.infra.ciab.test",
+					"fqdn": "edge.ciab",
 					"interfaceName": "eth0",
 					"type": "EDGE",
 					"hashId": "edge"
@@ -231,7 +231,7 @@ Response Structure
 				"trafficOpsVersion": "4.0.0-10449.03d91ae3.el7",
 				"trafficOpsUser": "admin",
 				"date": 1580152814,
-				"trafficOpsHost": "trafficops.infra.ciab.test"
+				"trafficOpsHost": "trafficops.ciab"
 			},
 			"cacheGroups": [
 				{
@@ -253,7 +253,7 @@ Response Structure
 				"tld.soa.admin": "twelve_monkeys",
 				"dnssec.dynamic.response.expiration": "300s",
 				"api.cache-control.max-age": 10,
-				"neustar.polling.url": "https://trafficops.infra.ciab.test:443/neustar.tar.gz",
+				"neustar.polling.url": "https://trafficops.ciab:443/neustar.tar.gz",
 				"zonemanager.threadpool.scale": "0.50",
 				"coveragezone.polling.interval": 3600000,
 				"federationmapping.polling.interval": 60000,
@@ -262,9 +262,9 @@ Response Structure
 				"geolocation.polling.interval": 86400000,
 				"tld.soa.expire": 604800,
 				"federationmapping.polling.url": "https://${toHostname}/api/1.5/federations/all",
-				"coveragezone.polling.url": "https://trafficops.infra.ciab.test:443/coverage-zone.json",
+				"coveragezone.polling.url": "https://trafficops.ciab:443/coverage-zone.json",
 				"tld.soa.minimum": 30,
-				"geolocation.polling.url": "https://trafficops.infra.ciab.test:443/GeoLite2-City.mmdb.gz",
+				"geolocation.polling.url": "https://trafficops.ciab:443/GeoLite2-City.mmdb.gz",
 				"keystore.maintenance.interval": 300,
 				"zonemanager.cache.maintenance.interval": 300,
 				"domain_name": "mycdn.ciab.test",
@@ -288,7 +288,7 @@ Response Structure
 					"ip6": "fc01:9400:1000:8::b",
 					"port": 80,
 					"hostName": "trafficmonitor",
-					"fqdn": "trafficmonitor.infra.ciab.test"
+					"fqdn": "trafficmonitor.ciab"
 				}
 			],
 			"trafficRouters": [
@@ -301,7 +301,7 @@ Response Structure
 					"ip6": "fc01:9400:1000:8::c",
 					"port": 80,
 					"hostName": "trafficrouter",
-					"fqdn": "trafficrouter.infra.ciab.test",
+					"fqdn": "trafficrouter.ciab",
 					"apiPort": 3333
 				}
 			]

@@ -140,7 +140,7 @@ Response Structure
 				"deliveryservices": [
 					1
 				],
-				"domainName": "infra.ciab.test",
+				"domainName": "ciab",
 				"guid": null,
 				"hardwareInfo": null,
 				"hostName": "edge",

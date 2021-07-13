@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.yml -f docker-compose.expose-ports.yml -f ./optional/docker-compose.vnc.yml -f ./optional/docker-compose.vnc.expose-ports.yml --push-image=false
+    kompose.version: 1.22.0 (955b78124)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: vnc
+  name: vnc
+spec:
+  ports:
+    - name: "5909"
+      port: 5909
+      targetPort: 5909
+  selector:
+    io.kompose.service: vnc
+status:
+  loadBalancer: {}

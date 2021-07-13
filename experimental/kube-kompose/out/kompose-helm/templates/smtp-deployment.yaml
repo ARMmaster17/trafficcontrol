@@ -1,0 +1,264 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.yml -f docker-compose.expose-ports.yml -f ./optional/docker-compose.vnc.yml -f ./optional/docker-compose.vnc.expose-ports.yml --push-image=false -c
+    kompose.version: 1.22.0 (955b78124)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: smtp
+  name: smtp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: smtp
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose.yml -f docker-compose.expose-ports.yml -f ./optional/docker-compose.vnc.yml -f ./optional/docker-compose.vnc.expose-ports.yml --push-image=false -c
+        kompose.version: 1.22.0 (955b78124)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: smtp
+    spec:
+      containers:
+        - env:
+            - name: AUTO_SNAPQUEUE_ACTION_WAIT
+              value: "2"
+            - name: AUTO_SNAPQUEUE_ENABLED
+              value: "true"
+            - name: AUTO_SNAPQUEUE_POLL_INTERVAL
+              value: "2"
+            - name: AUTO_SNAPQUEUE_SERVERS
+              value: trafficops,trafficmonitor,trafficrouter,trafficvault,edge,mid-01,mid-02
+            - name: CDN_NAME
+              value: CDN-in-a-Box
+            - name: CDN_SUBDOMAIN
+              value: mycdn
+            - name: DBIC_TRACE
+              value: "0"
+            - name: DB_NAME
+              value: traffic_ops
+            - name: DB_PORT
+              value: "5432"
+            - name: DB_SERVER
+              value: db
+            - name: DB_USER
+              value: traffic_ops
+            - name: DB_USER_PASS
+              value: twelve
+            - name: DNS_SERVER
+              value: dns
+            - name: DS_HOSTS
+              value: demo1 demo2 demo3
+            - name: EDGE_HOST
+              value: edge
+            - name: ENROLLER_DEBUG_ENABLE
+              value: "false"
+            - name: ENROLLER_DIR
+              value: /shared/enroller
+            - name: ENROLLER_HOST
+              value: enroller
+            - name: FEDERATION_CNAME
+              value: foo.kabletown.net.
+            - name: GRAFANA_ADMIN_PASSWORD
+              value: grafanaadminpassword
+            - name: GRAFANA_ADMIN_USER
+              value: grafanaadmin
+            - name: GRAFANA_PORT
+              value: "443"
+            - name: INFLUXDB_ADMIN_PASSWORD
+              value: influxadminpassword
+            - name: INFLUXDB_ADMIN_USER
+              value: influxadmin
+            - name: INFLUXDB_HOST
+              value: influxdb
+            - name: INFLUXDB_PORT
+              value: "8086"
+            - name: INFRA_SUBDOMAIN
+              value: infra
+            - name: MID_01_HOST
+              value: mid-01
+            - name: MID_02_HOST
+              value: mid-02
+            - name: ORIGIN_HOST
+              value: origin
+            - name: PGPASSWORD
+              value: twelve
+            - name: POSTGRES_PASSWORD
+              value: twelve
+            - name: SMTP_HOST
+              value: smtp
+            - name: SMTP_PORT
+              value: "25"
+            - name: T3C_DEBUG_COMPONENT_EDGE
+              value: none
+            - name: T3C_DEBUG_COMPONENT_MID_01
+              value: none
+            - name: T3C_DEBUG_COMPONENT_MID_02
+              value: none
+            - name: TLD_DOMAIN
+              value: ciab.test
+            - name: TM_DEBUG_ENABLE
+              value: "false"
+            - name: TM_EMAIL
+              value: tmonitor@cdn.example.com
+            - name: TM_HOST
+              value: trafficmonitor
+            - name: TM_LOG_DEBUG
+              value: stdout
+            - name: TM_LOG_ERROR
+              value: stdout
+            - name: TM_LOG_EVENT
+              value: stdout
+            - name: TM_LOG_INFO
+              value: stdout
+            - name: TM_LOG_WARNING
+              value: stdout
+            - name: TM_PASSWORD
+              value: jhdslvhdfsuklvfhsuvlhs
+            - name: TM_PORT
+              value: "80"
+            - name: TM_USER
+              value: tmon
+            - name: TO_ADMIN_FULL_NAME
+              value: James Cole
+            - name: TO_ADMIN_PASSWORD
+              value: twelve12
+            - name: TO_ADMIN_USER
+              value: admin
+            - name: TO_DEBUG_ENABLE
+              value: "false"
+            - name: TO_EMAIL
+              value: cdnadmin@example.com
+            - name: TO_HOST
+              value: trafficops
+            - name: TO_LOG_DEBUG
+              value: /dev/null
+            - name: TO_LOG_ERROR
+              value: /var/log/traffic_ops/error.log
+            - name: TO_LOG_EVENT
+              value: /var/log/traffic_ops/event.log
+            - name: TO_LOG_INFO
+              value: /var/log/traffic_ops/info.log
+            - name: TO_LOG_WARNING
+              value: /var/log/traffic_ops/warning.log
+            - name: TO_PORT
+              value: "443"
+            - name: TP_EMAIL
+              value: tp@cdn.example.com
+            - name: TP_HOST
+              value: trafficportal
+            - name: TP_PORT
+              value: "443"
+            - name: TR_API_PORT
+              value: "3333"
+            - name: TR_DEBUG_ENABLE
+              value: "false"
+            - name: TR_DNS_PORT
+              value: "53"
+            - name: TR_HOST
+              value: trafficrouter
+            - name: TR_HTTPS_PORT
+              value: "443"
+            - name: TR_HTTP_PORT
+              value: "80"
+            - name: TS_DEBUG_ENABLE
+              value: "false"
+            - name: TS_EMAIL
+              value: tstats@cdn.example.com
+            - name: TS_HOST
+              value: trafficstats
+            - name: TS_PASSWORD
+              value: trafficstatspassword
+            - name: TS_USER
+              value: tstats
+            - name: TV_ADMIN_PASSWORD
+              value: riakAdmin
+            - name: TV_ADMIN_USER
+              value: admin
+            - name: TV_AES_KEY_LOCATION
+              value: /opt/traffic_ops/app/aes.key
+            - name: TV_BACKEND
+              value: postgres
+            - name: TV_DB_NAME
+              value: traffic_vault
+            - name: TV_DB_PORT
+              value: "5432"
+            - name: TV_DB_SERVER
+              value: db
+            - name: TV_DB_USER
+              value: traffic_vault
+            - name: TV_DB_USER_PASS
+              value: twelve
+            - name: TV_EMAIL
+              value: tvault@cdn.example.com
+            - name: TV_HOST
+              value: trafficvault
+            - name: TV_HTTPS_PORT
+              value: "8088"
+            - name: TV_HTTP_PORT
+              value: "8098"
+            - name: TV_INT_PORT
+              value: "8087"
+            - name: TV_PASSWORD
+              value: mwL5GP6Ghu_uJpkfjfiBmii3l9vfgLl0
+            - name: TV_RIAK_PASSWORD
+              value: riakPassword
+            - name: TV_RIAK_USER
+              value: riakuser
+            - name: TV_USER
+              value: tvault
+            - name: X509_CA_CITY
+              value: Denver
+            - name: X509_CA_COMPANY
+              value: NotComcast
+            - name: X509_CA_COUNTRY
+              value: US
+            - name: X509_CA_DIGEST
+              value: sha256
+            - name: X509_CA_DIR
+              value: /shared/ssl
+            - name: X509_CA_DURATION_DAYS
+              value: "365"
+            - name: X509_CA_EMAIL
+              value: no-reply@ciab
+            - name: X509_CA_ENV_FILE
+              value: /shared/ssl/environment
+            - name: X509_CA_KEYSIZE
+              value: "4096"
+            - name: X509_CA_KEYTYPE
+              value: rsa
+            - name: X509_CA_NAME
+              value: CIAB-CA
+            - name: X509_CA_ORG
+              value: CDN-in-a-Box
+            - name: X509_CA_ORGUNIT
+              value: CDN-in-a-Box
+            - name: X509_CA_PERSIST_DIR
+              value: /ca
+            - name: X509_CA_PERSIST_ENV_FILE
+              value: /ca/environment
+            - name: X509_CA_STATE
+              value: Colorado
+            - name: X509_CA_UMASK
+              value: "0000"
+          image: smtp
+          name: smtp
+          ports:
+            - containerPort: 443
+          resources: {}
+          volumeMounts:
+            - mountPath: /shared
+              name: kubekompose-shared
+      hostname: smtp
+      restartPolicy: Always
+      subdomain: ciab
+      volumes:
+        - name: kubekompose-shared
+          persistentVolumeClaim:
+            claimName: kubekompose-shared
+status: {}

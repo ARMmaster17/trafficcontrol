@@ -162,15 +162,15 @@ var positiveTests = []config.PositiveTest{
 		Description: "normal config returned from traffic ops",
 		Config: fmt.Sprintf("%s\n%s",
 			"# DO NOT EDIT - Generated for ATS_EDGE_TIER_CACHE by Traffic Ops on Fri Feb 15 22:01:53 UTC 2019",
-			"dest_domain=origin.infra.ciab.test port=80 scheme=http action=never-cache"),
+			"dest_domain=origin.ciab port=80 scheme=http action=never-cache"),
 	},
 	{
 		Description: "tab-delimitted config",
-		Config:      "dest_domain=origin.infra.ciab.test\tport=80\tscheme=http\taction=never-cache",
+		Config:      "dest_domain=origin.ciab\tport=80\tscheme=http\taction=never-cache",
 	},
 	{
 		Description: "multi-space delimitted config",
-		Config:      "dest_domain=origin.infra.ciab.test  port=80  scheme=http  action=never-cache",
+		Config:      "dest_domain=origin.ciab  port=80  scheme=http  action=never-cache",
 	},
 	{
 		Description: "multiline config with empty line",

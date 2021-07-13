@@ -364,7 +364,7 @@ This file deals with the configuration parameters of running Traffic Ops itself.
 
 :portal: This section provides information regarding a connected UI with which users interact, so that emails can include links to it.
 
-	:base_url: This URL should be the root and/or landing page of the UI. For Traffic Portal instances, this should include the fragment part of the URL, e.g. ``https://trafficportal.infra.ciab.test/#!/``.
+	:base_url: This URL should be the root and/or landing page of the UI. For Traffic Portal instances, this should include the fragment part of the URL, e.g. ``https://trafficportal.ciab/#!/``.
 	:docs_url: The actual use of this URL is unknown, but supposedly it ought to point to the documentation for the Traffic Control instance. It's hard to imagine a fantastic reason this shouldn't just always be https://traffic-control-cdn.readthedocs.io
 	:email_from: Most emails sent from the Traffic Ops server will use ``to.email_from``, but specifically password reset requests (which contain a link to a fragment under ``portal.base_url``) will instead use this as the value of their :mailheader:`From` field.
 	:pass_reset_path: A path to be added to ``base_url`` that is the URL of the UI's password reset interface. For Traffic Portal instances, this should always be set to "user".

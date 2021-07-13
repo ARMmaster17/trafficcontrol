@@ -143,7 +143,7 @@ A user makes a request to the ``/api/2.0/asns`` endpoint.
 
 	GET /api/2.0/asns HTTP/1.1
 	Accept: application/json
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: example
 
 The response JSON indicates an authentication error.
@@ -168,7 +168,7 @@ To authenticate, the user sends a POST request containing their login informatio
 
 	POST /api/2.0/user/login HTTP/1.1
 	User-Agent: example
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	Accept: application/json
 	Content-Length: 32
 	Content-Type: application/x-www-form-urlencoded
@@ -202,7 +202,7 @@ Using this cookie, the user can now access their original target - the ``/api/2.
 	GET /api/2.0/asns HTTP/1.1
 	Accept: application/json
 	Cookie: mojolicious=...;
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: Example
 
 \... and the Traffic Ops server will now happily service this request.

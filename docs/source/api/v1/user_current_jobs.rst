@@ -40,7 +40,7 @@ Request Structure
 	:caption: Request Example
 
 	GET /api/1.4/user/current/jobs?keyword=PURGE HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...
@@ -105,7 +105,7 @@ Response Structure
 	"response": [{
 		"agent": 1,
 		"assetType": "file",
-		"assetUrl": "http://origin.infra.ciab.test/.*",
+		"assetUrl": "http://origin.ciab/.*",
 		"deliveryService": "demo1",
 		"enteredTime": "2019-06-19 13:19:51+00",
 		"id": 3,
@@ -152,7 +152,7 @@ Request Structure
 	:caption: Request Example
 
 	POST /api/1.4/user/current/jobs HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: python-requests/2.20.1
 	Accept-Encoding: gzip, deflate
 	Accept: */*
@@ -184,7 +184,7 @@ Response Structure
 	Access-Control-Allow-Origin: *
 	Content-Encoding: gzip
 	Content-Type: application/json
-	Location: https://trafficops.infra.ciab.test/api/1.4/jobs?id=3
+	Location: https://trafficops.ciab/api/1.4/jobs?id=3
 	Set-Cookie: mojolicious=...; Path=/; Expires=Mon, 18 Nov 2019 17:40:54 GMT; Max-Age=3600; HttpOnly
 	Whole-Content-Sha512: zQrzB3SLXTbpxLaVWq4WHeONUfEirXDaLRlCi/4+fekgtbjnDgGnA+Sq6MGaxRyQ92/96IsYjAP3Re6ZoN7rzg==
 	X-Server-Name: traffic_ops_golang/
@@ -202,7 +202,7 @@ Response Structure
 		}
 	],
 	"response": {
-		"assetUrl": "http://origin.infra.ciab.test/.*",
+		"assetUrl": "http://origin.ciab/.*",
 		"createdBy": "admin",
 		"deliveryService": "demo1",
 		"id": 1,

@@ -103,7 +103,7 @@ Request Structure
 	:caption: Request Example
 
 	PUT /api/4.0/deliveryservices/1 HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...
@@ -129,7 +129,7 @@ Request Structure
 		"missLat": -1,
 		"missLong": -1,
 		"multiSiteOrigin": false,
-		"orgServerFqdn": "http://origin.infra.ciab.test",
+		"orgServerFqdn": "http://origin.ciab",
 		"protocol": 0,
 		"qstringIgnore": 0,
 		"rangeRequestHandling": 0,
@@ -183,7 +183,7 @@ Request Structure
 	:caption: Request Example
 
 	DELETE /api/4.0/deliveryservices/2 HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...

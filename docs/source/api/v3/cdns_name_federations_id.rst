@@ -50,7 +50,7 @@ Request Structure
 	:caption: Request Example
 
 	PUT /api/3.0/cdns/CDN-in-a-Box/federations/1 HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.62.0
 	Accept: */*
 	Cookie: mojolicious=...
@@ -128,7 +128,7 @@ Request Structure
 	:caption: Request Example
 
 	DELETE /api/3.0/cdns/CDN-in-a-Box/federations/1 HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.62.0
 	Accept: */*
 	Cookie: mojolicious=...

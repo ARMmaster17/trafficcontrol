@@ -54,7 +54,7 @@ Request Structure
 	:caption: Request Example
 
 	GET /api/4.0/capabilities?name=test HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...

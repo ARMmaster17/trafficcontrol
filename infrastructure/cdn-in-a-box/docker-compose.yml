@@ -41,7 +41,7 @@ services:
       context: .
       dockerfile: traffic_ops/Dockerfile-db
     hostname: db
-    domainname: infra.ciab.test
+    domainname: ciab
     depends_on:
       - dns
     volumes:
@@ -63,7 +63,7 @@ services:
       - db
       - enroller
       - smtp
-    domainname: infra.ciab.test
+    domainname: ciab
     env_file:
       - variables.env
     environment:
@@ -86,7 +86,7 @@ services:
         TRAFFIC_PORTAL_RPM: traffic_portal/traffic_portal.rpm
     depends_on:
       - enroller
-    domainname: infra.ciab.test
+    domainname: ciab
     env_file:
       - variables.env
     hostname: trafficportal
@@ -106,7 +106,7 @@ services:
       - enroller
     volumes:
       - shared:/shared
-    domainname: infra.ciab.test
+    domainname: ciab
     env_file:
       - variables.env
     hostname: trafficmonitor
@@ -123,7 +123,7 @@ services:
         TOMCAT_RPM: traffic_router/tomcat.rpm
     depends_on:
       - enroller
-    domainname: infra.ciab.test
+    domainname: ciab
     env_file:
       - variables.env
     hostname: trafficrouter
@@ -142,7 +142,7 @@ services:
     depends_on:
       - enroller
       - influxdb
-    domainname: infra.ciab.test
+    domainname: ciab
     env_file:
       - variables.env
     hostname: trafficstats
@@ -154,7 +154,7 @@ services:
       context: .
       dockerfile: traffic_stats/Dockerfile-influxdb
     hostname: influxdb
-    domainname: infra.ciab.test
+    domainname: ciab
     depends_on:
       - dns
     env_file:
@@ -176,7 +176,7 @@ services:
     volumes:
       - schemas:/etc/riak/schemas
       - shared:/shared
-    domainname: infra.ciab.test
+    domainname: ciab
     env_file:
       - variables.env
     hostname: trafficvault
@@ -190,7 +190,7 @@ services:
       args:
         RHEL_VERSION: ${RHEL_VERSION:-8}
         ORT_RPM: infrastructure/cdn-in-a-box/cache/trafficcontrol-cache-config.rpm
-    domainname: infra.ciab.test
+    domainname: ciab
     environment:
       DEBUG_PORT: '2347'
     env_file:
@@ -208,7 +208,7 @@ services:
       args:
         RHEL_VERSION: ${RHEL_VERSION:-8}
         ORT_RPM: infrastructure/cdn-in-a-box/cache/trafficcontrol-cache-config.rpm
-    domainname: infra.ciab.test
+    domainname: ciab
     environment:
       DEBUG_PORT: '2348'
     env_file:
@@ -226,7 +226,7 @@ services:
       args:
         RHEL_VERSION: ${RHEL_VERSION:-8}
         ORT_RPM: infrastructure/cdn-in-a-box/cache/trafficcontrol-cache-config.rpm
-    domainname: infra.ciab.test
+    domainname: ciab
     environment:
       DEBUG_PORT: '2349'
     env_file:
@@ -242,7 +242,7 @@ services:
       dockerfile: origin/Dockerfile
     depends_on:
       - enroller
-    domainname: infra.ciab.test
+    domainname: ciab
     env_file:
       - variables.env
     hostname: origin
@@ -255,7 +255,7 @@ services:
     build:
       context: ../..
       dockerfile: infrastructure/cdn-in-a-box/enroller/Dockerfile
-    domainname: infra.ciab.test
+    domainname: ciab
     depends_on:
       - dns
     env_file:
@@ -274,7 +274,7 @@ services:
     volumes:
       - shared:/shared
     hostname: dns
-    domainname: infra.ciab.test
+    domainname: ciab
 
   smtp:
     build:
@@ -287,14 +287,14 @@ services:
       - variables.env
     volumes:
       - shared:/shared
-    domainname: infra.ciab.test
+    domainname: ciab
 
   # static provides the MaxMind databases and coverage-zone.json, which used to be served by Traffic Ops Perl.
   static:
     build:
       context: ../..
       dockerfile: infrastructure/cdn-in-a-box/static/Dockerfile
-    domainname: infra.ciab.test
+    domainname: ciab
     hostname: static
     env_file:
       - variables.env

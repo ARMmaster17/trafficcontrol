@@ -47,7 +47,7 @@ Request Structure
 	:caption: Request Structure
 
 	PUT /api/3.0/type/3004 HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...
@@ -124,7 +124,7 @@ Request Structure
 	:caption: Request Structure
 
 	DELETE /api/3.0/type/3004 HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...

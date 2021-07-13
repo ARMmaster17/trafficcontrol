@@ -120,7 +120,7 @@ Response Structure
 		],
 		"type": "EDGE",
 		"iloIpNetmask": "",
-		"domainName": "infra.ciab.test",
+		"domainName": "ciab",
 		"iloUsername": "",
 		"status": "REPORTED",
 		"ipAddress": "172.16.239.100",

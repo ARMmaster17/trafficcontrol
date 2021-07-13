@@ -50,7 +50,7 @@ INSERT INTO region(name, division) VALUES('${REGION}', 1);
 INSERT INTO phys_location(name, short_name, region, address, city, state, zip)
   VALUES('${PHYS}', '${PHYS}', 1, 'some place idk', 'Denver', 'CO', '88888');
 INSERT INTO coordinate(name) VALUES('${COORD}');
-INSERT INTO cdn(name, domain_name) VALUES('${CDN}', 'infra.ciab.test');
+INSERT INTO cdn(name, domain_name) VALUES('${CDN}', 'ciab');
 WITH TYPE AS (SELECT id FROM type WHERE name = 'TC_LOC')
 INSERT INTO cachegroup(name, short_name, type, coordinate)
 SELECT '${CG}', '${CG}', TYPE.id, 1
@@ -63,7 +63,7 @@ PHYS AS (SELECT id FROM phys_location WHERE name = '${PHYS}'),
 CDN AS (SELECT id FROM cdn WHERE name = '${CDN}'),
 CG AS (SELECT id from cachegroup WHERE name = '${CG}')
 INSERT INTO server(host_name, domain_name, cachegroup, type, status, profile, phys_location, cdn_id)
-SELECT 'trafficvault', 'infra.ciab.test', CG.ID, TYPE.id, STATUS.id, PROFILE.id, PHYS.id, CDN.id
+SELECT 'trafficvault', 'ciab', CG.ID, TYPE.id, STATUS.id, PROFILE.id, PHYS.id, CDN.id
 FROM TYPE
 JOIN STATUS ON 1=1
 JOIN PROFILE ON 1=1
@@ -109,7 +109,7 @@ ciab_dir="${GITHUB_WORKSPACE}/infrastructure/cdn-in-a-box";
 trafficvault=trafficvault;
 start_traffic_vault() {
 	<<-'/ETC/HOSTS' sudo tee --append /etc/hosts
-		172.17.0.1    trafficvault.infra.ciab.test
+		172.17.0.1    trafficvault.ciab
 	/ETC/HOSTS
 
 	<<-'BASH_LINES' cat >infrastructure/cdn-in-a-box/traffic_vault/prestart.d/00-0-standalone-config.sh;
@@ -133,7 +133,7 @@ start_traffic_vault() {
 	docker run \
 		--detach \
 		--env-file="${ciab_dir}/variables.env" \
-		--hostname="${trafficvault}.infra.ciab.test" \
+		--hostname="${trafficvault}.ciab" \
 		--name="$trafficvault" \
 		--publish=8087:8087 \
 		--rm \

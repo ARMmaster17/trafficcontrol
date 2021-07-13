@@ -118,7 +118,7 @@ Request Structure
 	:caption: Request Structure
 
 	POST /api/1.4/cdns HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...

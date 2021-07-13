@@ -71,7 +71,7 @@ Request Structure
 	:caption: Request Example
 
 	GET /api/1.4/origins?name=demo1 HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...
@@ -121,7 +121,7 @@ Response Structure
 			"coordinateId": null,
 			"deliveryService": "demo1",
 			"deliveryServiceId": 1,
-			"fqdn": "origin.infra.ciab.test",
+			"fqdn": "origin.ciab",
 			"id": 1,
 			"ip6Address": null,
 			"ipAddress": null,
@@ -169,7 +169,7 @@ Request Structure
 	:caption: Request Example
 
 	POST /api/1.4/origins HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...
@@ -287,7 +287,7 @@ Request Structure
 	:caption: Request Example
 
 	PUT /api/1.4/origins?id=2 HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...
@@ -392,7 +392,7 @@ Request Structure
 	:caption: Request Example
 
 	DELETE /api/1.4/origins?id=2 HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...

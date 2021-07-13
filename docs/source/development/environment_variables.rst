@@ -18,7 +18,7 @@ Environment Variables
 *********************
 Various :abbr:`ATC (Apache Traffic Control)` components and tools use specific environment variables to modify their behavior - in some cases they're even mandatory. What follows is a (hopefully) exhaustive list of the environment variables used in multiple places throughout the project - variables used by only a single tool or component can be found in the usage/development documentation for that tool or component. Developers are encouraged to expand the usage of variables mentioned here rather than create new ones to serve the same purpose in a different tool.
 
-.. tip:: As environment variables can be set by any parent process, possibly unknown to the user or merely forgotten, they should generally have the lowest precedence of setting any given configuration (when multiple exist, e.g. configuration file parameters or command-line arguments) and should not be required if possible. It can be confusing to a user if ``some-tool --to-url="http://to.infra.ciab.test"`` actually uses some Traffic Ops URL other than the one they can see and specified explicitly. The suggested precedence order is:
+.. tip:: As environment variables can be set by any parent process, possibly unknown to the user or merely forgotten, they should generally have the lowest precedence of setting any given configuration (when multiple exist, e.g. configuration file parameters or command-line arguments) and should not be required if possible. It can be confusing to a user if ``some-tool --to-url="http://to.ciab"`` actually uses some Traffic Ops URL other than the one they can see and specified explicitly. The suggested precedence order is:
 
 	#. Command-line arguments
 	#. Configuration file entries/parameters/lines

@@ -45,7 +45,7 @@ Request Structure
 	:caption: Request Structure
 
 	GET /api/4.0/types?name=TC_LOC HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...
@@ -104,7 +104,7 @@ Request Structure
 	:caption: Request Structure
 
 	POST /api/4.0/type HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...

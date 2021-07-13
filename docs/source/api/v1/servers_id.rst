@@ -63,7 +63,7 @@ Request Structure
 	:caption: Request Example
 
 	GET /api/1.4/servers?id=10 HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...
@@ -147,7 +147,7 @@ Response Structure
 			"cachegroupId": 6,
 			"cdnId": 2,
 			"cdnName": "CDN-in-a-Box",
-			"domainName": "infra.ciab.test",
+			"domainName": "ciab",
 			"guid": null,
 			"hostName": "mid",
 			"httpsPort": 443,
@@ -261,7 +261,7 @@ Request Structure
 	:caption: Request Example
 
 	PUT /api/1.4/servers/13 HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...
@@ -271,7 +271,7 @@ Request Structure
 	{
 		"cachegroupId": 6,
 		"cdnId": 2,
-		"domainName": "infra.ciab.test",
+		"domainName": "ciab",
 		"hostName": "quest",
 		"httpsPort": 443,
 		"iloIpAddress": "",
@@ -384,7 +384,7 @@ Response Structure
 		"cachegroupId": 6,
 		"cdnId": 2,
 		"cdnName": null,
-		"domainName": "infra.ciab.test",
+		"domainName": "ciab",
 		"guid": null,
 		"hostName": "quest",
 		"httpsPort": 443,
@@ -447,7 +447,7 @@ Request Structure
 	:caption: Request Example
 
 	DELETE /api/1.4/servers/13 HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...

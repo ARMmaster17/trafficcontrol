@@ -134,7 +134,7 @@ Options
 
 .. option:: -u TO_URL, --traffic-ops-url TO_URL
 
-	Request this URL, e.g. ``https://trafficops.infra.ciab.test/servers/edge/configfiles/ats``. If not given, :program:`atstccfg` will attempt to use the value of the :envvar:`TO_URL` environment variable.
+	Request this URL, e.g. ``https://trafficops.ciab/servers/edge/configfiles/ats``. If not given, :program:`atstccfg` will attempt to use the value of the :envvar:`TO_URL` environment variable.
 
 .. option:: -U TO_USER, --traffic-ops-user TO_USER
 

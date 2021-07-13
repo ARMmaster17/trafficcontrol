@@ -53,6 +53,6 @@ Response Properties
 	{ "response":
 		{
 			"status": "OK",
-			"server": "trafficvault.infra.ciab.test:8087"
+			"server": "trafficvault.ciab:8087"
 		}
 	}

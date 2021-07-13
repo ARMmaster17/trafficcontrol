@@ -114,7 +114,7 @@ To test the ``foo.kabletown.net.`` Federation:
 .. code-block:: shell
 	:caption: Query the Federation CNAME using the Delivery Service hostname
 
-	sudo docker-compose exec trafficrouter dig +short @trafficrouter.infra.ciab.test -t CNAME video.demo2.mycdn.ciab.test
+	sudo docker-compose exec trafficrouter dig +short @trafficrouter.ciab -t CNAME video.demo2.mycdn.ciab.test
 
 	# Expected response:
 	foo.kabletown.net.
@@ -175,7 +175,7 @@ All components in Apache Traffic Control utilize SSL/TLS secure communications b
 	+---------------------------+--------------------------------------------------------------------------+----------------------------------------+
 	| CIAB-CA-fullchain.crt     | Shared :abbr:`CA (Certificate Authority)` Certificate Chain Bundle\ [5]_ | N/A                                    |
 	+---------------------------+--------------------------------------------------------------------------+----------------------------------------+
-	| infra.ciab.test.crt       | Infrastruture Certificate                                                | :file:`{prefix}.infra.ciab.test`       |
+	| ciab.crt       | Infrastruture Certificate                                                | :file:`{prefix}.ciab`       |
 	+---------------------------+--------------------------------------------------------------------------+----------------------------------------+
 	| demo1.mycdn.ciab.test.crt | Demo1 :term:`Delivery Service` Certificate                               | :file:`{prefix}.demo1.mycdn.ciab.test` |
 	+---------------------------+--------------------------------------------------------------------------+----------------------------------------+
@@ -267,7 +267,7 @@ Mock Origin Service
 -------------------
 The default "origin" service container provides a basic static file HTTP server as the central repository for content. Additional files can be added to the origin root content directory located at :file:`infrastructure/cdn-in-a-box/origin/content`. To request content directly from the origin directly and bypass the CDN:
 
-* Origin Service URL: http://origin.infra.ciab.test/index.html
+* Origin Service URL: http://origin.ciab/index.html
 * Docker Host: http://localhost:9200/index.html
 
 .. _ciab-optional-containers:

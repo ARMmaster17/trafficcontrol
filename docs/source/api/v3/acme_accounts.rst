@@ -78,7 +78,7 @@ The request body must be a single :term:`ACME Account` object with the following
 	:caption: Request Example
 
 	POST /api/3.1/acme_accounts HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...
@@ -149,7 +149,7 @@ The request body must be a single :term:`ACME Account` object with the following
 	:caption: Request Example
 
 	PUT /api/3.1/acme_accounts HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: mojolicious=...

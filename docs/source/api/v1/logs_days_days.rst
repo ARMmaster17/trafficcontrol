@@ -52,7 +52,7 @@ Request Structure
 	:caption: Request Example
 
 	GET /api/1.4/logs/1/days?limit=2 HTTP/1.1
-	Host: trafficops.infra.ciab.test
+	Host: trafficops.ciab
 	User-Agent: curl/7.47.0
 	Accept: */*
 	Cookie: last_seen_log="2018-11-15% 15:11:38"; mojolicious=...
